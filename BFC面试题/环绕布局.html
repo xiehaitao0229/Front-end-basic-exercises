@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .test1 {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      float: left;
+    }
+
+    .test2 {
+      width: 200px;
+      height: 200px;
+      background: orange;
+      margin-bottom: 20px;
+    }
+    .test3{
+      width: 200px;
+      height: 200px;
+      background: orange;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 问题环绕布局:文字环绕浮动 -->
+  <div class="test1">test1 test1 test1 test1test1 test1 test1</div>
+  <div class="test2">test2 test2 test2 test2 test2 test2</div>
+
+  <!-- 解决环绕布局 -->
+  <div class="test1">test1 test1 test1 test1test1 test1 test1</div>
+  <div class="test3">test2 test2 test2 test2 test2 test2</div>
+</body>
+
+</html>

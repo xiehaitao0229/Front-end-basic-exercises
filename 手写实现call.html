@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    Function.prototype.call2 = function (context) {
+      var context = context || window;
+      context.fn = this;
+
+      var args = [];
+      for (let i = 1, len = arguments.length; i < len; i++) {
+        args.push(`arguments[ ${i} ]`)
+      }
+
+      var result = eval(`context.fn(${args})`);
+
+      delete context.fn;
+      return result;
+    }
+
+    // 测试一下
+    var value = 2;
+
+    var obj = {
+      value: 1
+    }
+
+    function bar(name, age) {
+      console.log(this.value);
+      return {
+        value: this.value,
+        name: name,
+        age: age
+      }
+    }
+
+    console.log(bar.call2(null,'谢海涛',19))
+  </script>
+</body>
+
+</html>

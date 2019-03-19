@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .bfc {
+      border: 3px solid orange;
+      width: 300px;
+    }
+    .bfc2 {
+      border: 3px solid orange;
+      width: 300px;
+      overflow: hidden;
+    }
+
+    .test {
+      border: 3px solid black;
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 问题:父元素出现了高度坍塌，浮动的元素跑到了父元素之外 -->
+  父元素出现了高度坍塌，浮动的元素跑到了父元素之外
+  <div class="bfc">
+    <div class="test"></div>
+    <div class="test"></div>
+  </div>
+  <br /><br /><br /><br /><br /><br />
+  <!-- 通过在父元素创建一个新的BFC来清除浮动 -->
+  <div class="bfc2">
+      <div class="test"></div>
+      <div class="test"></div>
+    </div>
+</body>
+
+</html>

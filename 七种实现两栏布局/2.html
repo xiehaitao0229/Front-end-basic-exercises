@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper{
+      overflow: hidden; /* 清除浮动 */
+      border: 1px solid black;
+      height: 200px;
+    }
+    #left{
+      width: 200px;
+      float: left;
+      background: orange;
+      height: 200px;
+    }
+    #right{
+      background: palevioletred;
+      margin-left: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 第二种方案 absolute+margin-left -->
+  <div class="wrapper">
+    <div id="left"></div>
+    <div id="right"></div>
+  </div>
+</body>
+</html>
