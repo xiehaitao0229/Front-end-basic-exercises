@@ -14,3 +14,7 @@ function deepCopy(obj){
 } 
 
 console.log(deepCopy(arr))
+
+console.log(JSON.stringify( function () {
+  
+} ))
