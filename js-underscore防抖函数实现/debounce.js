@@ -1,3 +1,10 @@
+/**
+ * 防抖函数的使用场景
+ * 1.每次 resize/scroll 触发统计事件
+ * 2.文本输入的验证（连续输入文字后发送 AJAX 请求进行验证，验证一次就好）
+ */
+
+
 var count = 1;
 var container = document.getElementById('container')
 var btn = document.getElementById('btn')
